@@ -34,6 +34,10 @@ public class  intakeCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	double move = Robot.oi.controller.getRawAxis(1);
+    	double spin = Robot.oi.controller.getRawAxis(0);
+    	Robot.intakeSystem.intakeDrive.arcadeDrive(move,spin);
+    	
     }
 
     // Make this return true when this Command no longer needs to run execute()
