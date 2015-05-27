@@ -34,7 +34,24 @@ public class  armCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	
+    	if(Robot.oi.openArms.get() == true){
+    		
+    		Robot.armSystem.openArms();
+    	}
+    	
+    	if(Robot.oi.closeArms.get() == true){
+    		
+    		Robot.armSystem.closeArms();
+    	}
+    	
+    	else{
+    		
+    		Robot.armSystem.armsOff();
+    		
+    	}
     }
+    
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {

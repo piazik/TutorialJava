@@ -34,6 +34,11 @@ public class  liftCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	
+    	double axis = Robot.oi.controller.getRawAxis(3);
+    	
+    	Robot.liftSystem.liftMotor.set(axis * -1);
+    	
     }
 
     // Make this return true when this Command no longer needs to run execute()
